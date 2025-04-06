@@ -82,15 +82,21 @@ enum MT8816_X
 // X1 KA2   Q    W    E    R    T    Y    U    I    O    P   KA5 X5
 // X2 KA1   A    S    D    F    G    H    J    K    L   EN   KA6 X6
 // X3 KA0  CS    Z    X    C    V    B    N    M   SS   SP   KA7 X7
-//
-// A11 - KA3
-// A10 - KA2
-// A9  - KA1
-// A8  - KA0
-// A12 - KA4
-// A13 - KA5
-// A14 - KA6
-// A15 - KA7
+
+// A11 - KA3 - X0
+// A10 - KA2 - X1
+// A9  - KA1 - X2
+// A8  - KA0 - X3
+// A12 - KA4 - X4
+// A13 - KA5 - X5
+// A14 - KA6 - X6
+// A15 - KA7 - X7
+
+// KD0 - Y4
+// KD1 - Y3
+// KD2 - Y2
+// KD4 - Y1
+// KD3 - Y0
 
 extern const enum zx_key{  //Pentagon 128/2024 map
     NC=0xFF,
