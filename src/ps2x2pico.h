@@ -60,7 +60,7 @@ enum MT8816_Y
 	D4 = 0 << 4
 };
 
-enum CMT8816_X
+enum MT8816_X
 {
 	KA8  = 0,
 	KA9  = 1,
