@@ -80,7 +80,7 @@ enum MT8816_X
 //         KD0  KD1  KD2  KD3  KD4  KD4  KD3  KD2  KD1  KD0
 // X0 KA3   1    2    3    4    5    6    7    8    9    0   KA4 X4
 // X1 KA2   Q    W    E    R    T    Y    U    I    O    P   KA5 X5
-// X2 KA1   A    S    D    F    G    H    J    K    L    EN  KA6 X6
+// X2 KA1   A    S    D    F    G    H    J    K    L   EN   KA6 X6
 // X3 KA0  CS    Z    X    C    V    B    N    M   SS   SP   KA7 X7
 //
 // A11 - KA3
