@@ -62,78 +62,86 @@ enum MT8816_Y
 
 enum MT8816_X
 {
-	KA8  = 0,
-	KA9  = 1,
-	KA10 = 2,
-	KA11 = 3,
-	KA12 = 4,
-	KA13 = 5,
-	KA14 = 6,
-	KA15 = 7
+	KA3 = 7,
+	KA2 = 6,
+	KA1 = 5,
+	KA0 = 4,
+	KA4 = 3,
+	KA5 = 2,
+	KA6 = 1,
+	KA7 = 0
 };
 
- //----------------------------------------------------------
- // Keytable   AX0 AX1 AX2 AX3 AY0 AY1 AY2
- //         
- //   
- // pent   Y0  Y1  Y2  Y4  Y3  Y3  Y4  Y2  Y1  Y0
- //        D0  D1  D2  D3  D4  D4  D3  D2  D1  D0
- // X7 KA11 1   2   3   4   5  6   7   8   9   0   KA12 X3
- // X6 KA10 Q   W   E   R   T  Y   U   I   O   P   KA13 X2
- // X5 KA9  A   S   D   F   G  H   J   K   L   EN  KA14 X1
- // X4 KA8 CS   Z   X   C   V  B   N   M   SS  SP  KA15 X0
+//----------------------------------------------------------
+// Keytable   AX0 AX1 AX2 AX3 AY0 AY1 AY2
+//         
+//   
+// pent    Y4   Y3   Y2   Y0   Y1   Y1   Y0   Y2   Y3   Y4
+//         KD0  KD1  KD2  KD3  KD4  KD4  KD3  KD2  KD1  KD0
+// X7 KA7   1    2    3    4    5    6    7    8    9    0   KA0 X3
+// X6 KA6   Q    W    E    R    T    Y    U    I    O    P   KA1 X2
+// X5 KA5   A    S    D    F    G    H    J    K    L    EN  KA2 X1
+// X4 KA4  CS    Z    X    C    V    B    N    M   SS   SP   KA3 X0
+//
+// A11 - KA3
+// A10 - KA2
+// A9  - KA1
+// A8  - KA0
+// A12 - KA4
+// A13 - KA5
+// A14 - KA6
+// A15 - KA7
 
-
-extern const enum zx_key{  //Pentagon conf
+extern const enum zx_key{  //Pentagon 128/2024 map
     NC=0xFF,
     //      ряд X0
-    SP= D0 | KA15, //SPACE
-    SS= D1 | KA15, //SYMBOL SHIFT
-    _M= D2 | KA15,
-    _N= D4 | KA15,
-    _B= D3 | KA15,
+    SP= D0 | KA3, //SPACE
+    SS= D1 | KA3, //SYMBOL SHIFT
+    _M= D2 | KA3,
+    _N= D4 | KA3,
+    _B= D3 | KA3,
     //      ряд X1
-    EN= D0 | KA14, // ENTER
-    _L= D1 | KA14,
-    _K= D2 | KA14,
-    _J= D4 | KA14,
-    _H= D3 | KA14,
+    EN= D0 | KA2, // ENTER
+    _L= D1 | KA2,
+    _K= D2 | KA2,
+    _J= D4 | KA2,
+    _H= D3 | KA2,
     //      ряд X2
-    _P= D0 | KA13,
-    _O= D1 | KA13,
-    _I= D2 | KA13,
-    _U= D4 | KA13,
-    _Y= D3 | KA13,
+    _P= D0 | KA1,
+    _O= D1 | KA1,
+    _I= D2 | KA1,
+    _U= D4 | KA1,
+    _Y= D3 | KA1,
     //      ряд X3
-    _0= D0 | KA12,
-    _9= D1 | KA12,
-    _8= D2 | KA12,
-    _7= D4 | KA12,
-    _6= D3 | KA12,
+    _0= D0 | KA0,
+    _9= D1 | KA0,
+    _8= D2 | KA0,
+    _7= D4 | KA0,
+    _6= D3 | KA0,
     //      ряд X4    
-    CS= D0 | KA11, //CAPS SHIFT
-    _Z= D1 | KA11,
-    _X= D2 | KA11,
-    _C= D4 | KA11,
-    _V= D3 | KA11,
+    CS= D0 | KA4, //CAPS SHIFT
+    _Z= D1 | KA4,
+    _X= D2 | KA4,
+    _C= D4 | KA4,
+    _V= D3 | KA4,
     //      ряд X5
-    _A= D0 | KA10,
-    _S= D1 | KA10,
-    _D= D2 | KA10,
-    _F= D4 | KA10,
-    _G= D3 | KA10,   
+    _A= D0 | KA5,
+    _S= D1 | KA5,
+    _D= D2 | KA5,
+    _F= D4 | KA5,
+    _G= D3 | KA5,   
     //      ряд X6
-    _Q= D0 | KA9,
-    _W= D1 | KA9,
-    _E= D2 | KA9,
-    _R= D4 | KA9,
-    _T= D3 | KA9,
+    _Q= D0 | KA6,
+    _W= D1 | KA6,
+    _E= D2 | KA6,
+    _R= D4 | KA6,
+    _T= D3 | KA6,
     //      ряд X7
-    _1= D0 | KA8,
-    _2= D1 | KA8,
-    _3= D2 | KA8,
-    _4= D4 | KA8,
-    _5= D3 | KA8
+    _1= D0 | KA7,
+    _2= D1 | KA7,
+    _3= D2 | KA7,
+    _4= D4 | KA7,
+    _5= D3 | KA7
 } zx_key_pent;
 
 

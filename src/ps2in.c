@@ -51,7 +51,7 @@ void ps2in_task(ps2in* this, ps2out* out) {
     
     if(parity != fifo >> 8) {
       pio_sm_put(this->pio, this->sm, ps2_frame(0xfe));
-      printf("** ps2in send 0xfe on fifo=%06x\n", fifo);
+      printf("** ps2in send 0xfe on fifo=%02x\n", fifo);
       return;
     }
     
