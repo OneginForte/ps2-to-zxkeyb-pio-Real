@@ -78,19 +78,17 @@ int main() {
   //ws2812_reset();
   ws2812_set_rgb(LEDBR, 0, 0); 
   
-  //memset(ps2buffer, 0, KBD_BUFFER_SIZE);
+
   //Nespad
-  //nespad_begin(clock_get_hz(clk_sys) / 1000, NES_GPIO_CLK, NES_GPIO_DATA, NES_GPIO_LAT);
-  //595 driver
-  //init_74hc595();
+
 
   kb_init(KBIN); //KBIN);
-  //ms_init(MSIN); //MSIN);
+
 
   while(1) {
     
     kb_task();
-    //ms_task();
+
   }
 }
 
